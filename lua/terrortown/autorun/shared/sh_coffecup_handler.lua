@@ -66,9 +66,7 @@ if SERVER then
 	end
 
 	function coffeeCup.PickupCup(ent, ply)
-		-- ToDo this should be improved in the future once the scoring system
-		-- gets improved with the round end screen rework
-		ply:AddFrags(GetConVar("ttt_coffeecup_reward_size"):GetInt())
+		events.Trigger(EVENT_COFFEECUP, ply)
 
 		ent:Remove()
 

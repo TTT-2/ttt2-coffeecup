@@ -1,5 +1,5 @@
-CreateConVar("ttt_coffeecup_amount", "2", {FCVAR_NOTIFY, FCVAR_ARCHIVE})
-CreateConVar("ttt_coffeecup_reward_size", "3", {FCVAR_NOTIFY, FCVAR_ARCHIVE})
+CreateConVar("ttt_coffeecup_amount", "2", {FCVAR_NOTIFY, FCVAR_ARCHIVE, FCVAR_REPLICATED})
+CreateConVar("ttt_coffeecup_reward_size", "3", {FCVAR_NOTIFY, FCVAR_ARCHIVE, FCVAR_REPLICATED})
 
 hook.Add("TTTUlxInitCustomCVar", "TTTCoffeeCupInitRWCVar", function(name)
 	ULib.replicatedWritableCvar("ttt_coffeecup_amount", "rep_ttt_coffeecup_amount", GetConVar("ttt_coffeecup_amount"):GetInt(), true, false, name)
