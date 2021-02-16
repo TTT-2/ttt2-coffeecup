@@ -1,4 +1,4 @@
-L = LANG.GetLanguageTableReference("deutsch")
+L = LANG.GetLanguageTableReference("de")
 
 L["coffecup_name"] = "Kaffeetasse"
 L["coffecup_pickup"] = "Drücke [{usekey}] um die Tasse aufzuheben"
