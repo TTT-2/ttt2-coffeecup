@@ -33,9 +33,9 @@ if SERVER then
 
 		table.Shuffle(suitableEnts)
 
-		local amount = math.min(GetConVar("ttt_coffeecup_amount"):GetInt(), #suitableEnts)
+		local cup_amount = math.min(GetConVar("ttt_coffeecup_amount"):GetInt(), #suitableEnts)
 
-		for i = 1, amount do
+		for i = 1, cup_amount do
 			local ent = suitableEnts[i]
 			local pos = ent:GetPos()
 
@@ -50,7 +50,20 @@ if SERVER then
 			coffeeCup.cups[#coffeeCup.cups + 1] = coffeeCupEnt
 		end
 
-		LANG.MsgAll("coffeecup_hunt_started", {amount = amount, points = GetConVar("ttt_coffeecup_reward_size"):GetInt()}, MSG_MSTACK_PLAIN)
+		local mode = GetConVar("ttt_coffeecup_reward_mode"):GetInt()
+		local modeString = ""
+
+		if mode == CC_MODE_SCORE then
+			modeString = "coffeecup_hunt_started_score"
+		elseif mode == CC_MODE_CREDITS then
+			modeString = "coffeecup_hunt_started_credits"
+		elseif mode == CC_MODE_PS_POINTS then
+			modeString = "coffeecup_hunt_started_ps_points"
+		elseif mode == CC_MODE_PC_POINTS_PREMIUM then
+			modeString = "coffeecup_hunt_started_ps_points_premium"
+		end
+
+		LANG.MsgAll(modeString, {cup_amount = cup_amount, amount = GetConVar("ttt_coffeecup_reward_size"):GetInt()}, MSG_MSTACK_PLAIN)
 	end
 
 	function coffeeCup.RemoveCups()
@@ -88,8 +101,21 @@ if CLIENT then
 	local materialCoffeCup = Material("vgui/ttt/coffeecup.png")
 
 	net.Receive("ttt2_coffecup_mstack_found", function()
+		local mode = GetConVar("ttt_coffeecup_reward_mode"):GetInt()
+		local modeString = ""
+
+		if mode == CC_MODE_SCORE then
+			modeString = "coffeecup_granted_reward_score"
+		elseif mode == CC_MODE_CREDITS then
+			modeString = "coffeecup_granted_reward_credits"
+		elseif mode == CC_MODE_PS_POINTS then
+			modeString = "coffeecup_granted_reward_ps_points"
+		elseif mode == CC_MODE_PC_POINTS_PREMIUM then
+			modeString = "coffeecup_granted_reward_ps_points_premium"
+		end
+
 		MSTACK:AddColoredImagedMessage(
-			LANG.GetParamTranslation("coffeecup_granted_reward", {reward = net.ReadUInt(8)}),
+			LANG.GetParamTranslation(modeString, {amount = net.ReadUInt(8)}),
 			nil,
 			materialCoffeCup
 		)
