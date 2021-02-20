@@ -33,9 +33,9 @@ if SERVER then
 
 		table.Shuffle(suitableEnts)
 
-		local cup_amount = math.min(GetConVar("ttt_coffeecup_amount"):GetInt(), #suitableEnts)
+		local cupamount = math.min(GetConVar("ttt_coffeecupamount"):GetInt(), #suitableEnts)
 
-		for i = 1, cup_amount do
+		for i = 1, cupamount do
 			local ent = suitableEnts[i]
 			local pos = ent:GetPos()
 
@@ -63,7 +63,7 @@ if SERVER then
 			modeString = "coffeecup_hunt_started_ps_points_premium"
 		end
 
-		LANG.MsgAll(modeString, {cup_amount = cup_amount, amount = GetConVar("ttt_coffeecup_reward_size"):GetInt()}, MSG_MSTACK_PLAIN)
+		LANG.MsgAll(modeString, {cupamount = cupamount, amount = GetConVar("ttt_coffeecup_reward_size"):GetInt()}, MSG_MSTACK_PLAIN)
 	end
 
 	function coffeeCup.RemoveCups()
