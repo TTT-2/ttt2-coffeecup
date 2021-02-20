@@ -84,7 +84,7 @@ if SERVER then
 		ent:Remove()
 
 		net.Start("ttt2_coffecup_mstack_found")
-		net.WriteUInt(GetConVar("ttt_coffeecup_reward_size"):GetInt(), 8)
+		net.WriteUInt(GetConVar("ttt_coffeecup_reward_size"):GetInt(), 16)
 		net.Send(ply)
 	end
 
@@ -115,7 +115,7 @@ if CLIENT then
 		end
 
 		MSTACK:AddColoredImagedMessage(
-			LANG.GetParamTranslation(modeString, {amount = net.ReadUInt(8)}),
+			LANG.GetParamTranslation(modeString, {amount = net.ReadUInt(16)}),
 			nil,
 			materialCoffeCup
 		)
