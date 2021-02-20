@@ -1,9 +1,9 @@
-CreateConVar("ttt_coffeecupamount", "2", {FCVAR_NOTIFY, FCVAR_ARCHIVE, FCVAR_REPLICATED})
+CreateConVar("ttt_coffeecup_amount", "2", {FCVAR_NOTIFY, FCVAR_ARCHIVE, FCVAR_REPLICATED})
 CreateConVar("ttt_coffeecup_reward_size", "3", {FCVAR_NOTIFY, FCVAR_ARCHIVE, FCVAR_REPLICATED})
 CreateConVar("ttt_coffeecup_reward_mode", "1", {FCVAR_NOTIFY, FCVAR_ARCHIVE, FCVAR_REPLICATED})
 
 hook.Add("TTTUlxInitCustomCVar", "TTTCoffeeCupInitRWCVar", function(name)
-	ULib.replicatedWritableCvar("ttt_coffeecupamount", "rep_ttt_coffeecupamount", GetConVar("ttt_coffeecupamount"):GetInt(), true, false, name)
+	ULib.replicatedWritableCvar("ttt_coffeecup_amount", "rep_ttt_coffeecup_amount", GetConVar("ttt_coffeecup_amount"):GetInt(), true, false, name)
 	ULib.replicatedWritableCvar("ttt_coffeecup_reward_size", "rep_ttt_coffeecup_reward_size", GetConVar("ttt_coffeecup_reward_size"):GetInt(), true, false, name)
 	ULib.replicatedWritableCvar("ttt_coffeecup_reward_mode", "rep_ttt_coffeecup_reward_mode", GetConVar("ttt_coffeecup_reward_mode"):GetInt(), true, false, name)
 end)
@@ -30,8 +30,8 @@ if CLIENT then
 		tttrslst1:SetSpacing(5)
 
 		tttrslst1:AddItem(xlib.makeslider{
-			label = "ttt_coffeecupamount (Def. 2)",
-			repconvar = "rep_ttt_coffeecupamount",
+			label = "ttt_coffeecup_amount (Def. 2)",
+			repconvar = "rep_ttt_coffeecup_amount",
 			min = 0,
 			max = 25,
 			decimal = 0,

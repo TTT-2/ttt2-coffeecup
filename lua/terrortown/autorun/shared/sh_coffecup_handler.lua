@@ -33,7 +33,7 @@ if SERVER then
 
 		table.Shuffle(suitableEnts)
 
-		local cupamount = math.min(GetConVar("ttt_coffeecupamount"):GetInt(), #suitableEnts)
+		local cupamount = math.min(GetConVar("ttt_coffeecup_amount"):GetInt(), #suitableEnts)
 
 		for i = 1, cupamount do
 			local ent = suitableEnts[i]
