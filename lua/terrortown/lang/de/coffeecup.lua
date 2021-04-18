@@ -15,3 +15,5 @@ L["coffecup_help_score"] = "Das Aufheben dieser Kaffeetasse wird dir {amount} Pu
 L["coffecup_help_credits"] = "Das Aufheben dieser Kaffeetasse wird dir {amount} Ausrüstungspunkt(e) geben."
 L["coffecup_help_ps_points"] = "Das Aufheben dieser Kaffeetasse wird dir {amount} PointShop Punkt(e) geben."
 L["coffecup_help_ps_points_premium"] = "Das Aufheben dieser Kaffeetasse wird dir {amount} PointShop Premium Punkt(e) geben."
+
+L["tooltip_coffeecup_score"] = "Kaffeetasse: {score}"

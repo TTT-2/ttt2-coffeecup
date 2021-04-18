@@ -15,3 +15,5 @@ L["coffeecup_hunt_started_score"] = "La chasse aux tasses de café a commencé! 
 --L["coffecup_help_credits"] = "Picking up this coffee cup will grant you {amount} credit(s)."
 --L["coffecup_help_ps_points"] = "Picking up this coffee cup will grant you {amount} PointShop point(s)."
 --L["coffecup_help_ps_points_premium"] = "Picking up this coffee cup will grant you {amount} PointShop premium point(s)."
+
+--L["tooltip_coffeecup_score"] = "Coffee Cup: {score}"
