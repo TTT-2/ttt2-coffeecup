@@ -20,6 +20,7 @@ if SERVER then
 	util.AddNetworkString("ttt2_coffecup_mstack_found")
 
 	resource.AddFile("materials/vgui/ttt/coffeecup.png")
+	resource.AddFile("materials/vgui/ttt/vskin/events/coffeecup.vmt")
 
 	function coffeeCup.SetupCups()
 		-- get all suitable entities

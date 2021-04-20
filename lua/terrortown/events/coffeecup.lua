@@ -1,6 +1,17 @@
 if CLIENT then
-	EVENT.icon = Material("")
-	EVENT.description = "desc_event_coffeecup"
+	EVENT.icon = Material("vgui/ttt/vskin/events/coffeecup")
+	EVENT.title = "title_event_coffeecup"
+
+	function EVENT:GetText()
+		return {
+			{
+				string = "desc_event_coffeecup",
+				params = {
+					player = self.event.finder.nick,
+				}
+			}
+		}
+	end
 end
 
 if SERVER then
@@ -8,7 +19,10 @@ if SERVER then
 		local mode = GetConVar("ttt_coffeecup_reward_mode"):GetInt()
 		local size = GetConVar("ttt_coffeecup_reward_size"):GetInt()
 
-		self:AddAffectedPlayers({finder:SteamID64()})
+		self:AddAffectedPlayers(
+			{finder:SteamID64()},
+			{finder:Nick()}
+		)
 
 		if mode == CC_MODE_CREDITS then
 			finder:AddCredits(size)

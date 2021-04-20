@@ -17,3 +17,6 @@ L["coffecup_help_ps_points"] = "Das Aufheben dieser Kaffeetasse wird dir {amount
 L["coffecup_help_ps_points_premium"] = "Das Aufheben dieser Kaffeetasse wird dir {amount} PointShop Premium Punkt(e) geben."
 
 L["tooltip_coffeecup_score"] = "Kaffeetasse: {score}"
+L["coffeecup_score"] = "Kaffeetasse:"
+L["title_event_coffeecup"] = "Eine Kaffeetasse wurde gefunden"
+L["desc_event_coffeecup"] = "{player} hat eine Kaffeetasse gefunden."

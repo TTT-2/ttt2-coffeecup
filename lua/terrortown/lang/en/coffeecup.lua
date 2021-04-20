@@ -17,3 +17,6 @@ L["coffecup_help_ps_points"] = "Picking up this coffee cup will grant you {amoun
 L["coffecup_help_ps_points_premium"] = "Picking up this coffee cup will grant you {amount} PointShop premium point(s)."
 
 L["tooltip_coffeecup_score"] = "Coffee Cup: {score}"
+L["coffeecup_score"] = "Coffee Cup:"
+L["title_event_coffeecup"] = "A coffee cup was found"
+L["desc_event_coffeecup"] = "{player} has found a coffee cup."
