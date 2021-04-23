@@ -69,5 +69,5 @@ if SERVER then
 end
 
 function EVENT:Serialize()
-
+	return self.event.finder.nick .. " has found a coffeecup."
 end
