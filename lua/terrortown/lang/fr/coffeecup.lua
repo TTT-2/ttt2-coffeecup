@@ -1,4 +1,4 @@
-L = LANG.GetLanguageTableReference("fr")
+local L = LANG.GetLanguageTableReference("fr")
 
 L["coffecup_name"] = "Tasse de Café"
 L["coffeecup_hunt_over"] = "La chasse aux tasses de café est terminée."

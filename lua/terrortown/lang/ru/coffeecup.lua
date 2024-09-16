@@ -1,4 +1,4 @@
-L = LANG.GetLanguageTableReference("ru")
+local L = LANG.GetLanguageTableReference("ru")
 
 L["coffecup_name"] = "Чашка кофе"
 L["coffeecup_hunt_over"] = "Охота за чашкой кофе окончена."
