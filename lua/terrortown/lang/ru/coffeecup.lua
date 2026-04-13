@@ -20,3 +20,13 @@ L["coffeecup_hunt_started_score"] = "Охота за чашкой кофе на�
 --L["coffeecup_score"] = "Coffee Cup:"
 --L["title_event_coffeecup"] = "A coffee cup was found"
 --L["desc_event_coffeecup"] = "{player} has found a coffee cup."
+
+--L["submenu_server_addons_coffeecup_title"] = "Coffee Cup"
+--L["header_addons_coffeecup"] = "Coffee Cup Settings"
+--L["label_coffeecup_amount"] = "Cup amount"
+--L["label_coffeecup_reward_size"] = "Reward size"
+--L["label_coffeecup_reward_mode"] = "Reward mode"
+--L["label_coffeecup_score_points"] = "Score Points"
+--L["label_coffeecup_credits"] = "Credits"
+--L["label_coffeecup_pointshop_points"] = "PointShop Points"
+--L["label_coffeecup_pointshop_premium_points"] = "PointShop Premium Points"
