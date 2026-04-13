@@ -15,11 +15,11 @@ function CLGAMEMODESUBMENU:Populate(parent)
     })
 
     form:MakeSlider({
-    serverConvar = "ttt_coffeecup_reward_size",
-    label = "label_coffeecup_reward_size",
-    min = 1,
-    max = 25,
-    decimal = 0,
+        serverConvar = "ttt_coffeecup_reward_size",
+        label = "label_coffeecup_reward_size",
+        min = 1,
+        max = 25,
+        decimal = 0,
     })
 
     form:MakeComboBox({
